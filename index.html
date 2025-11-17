@@ -51,6 +51,11 @@
   <h3>Kandidát do Akademického senátu Univerzity Komenského</h3>
 </header>
 <section>
+  <h2>Informácie o voľbách</h2>
+  <p><strong>Dátum:</strong> 25.11.2025<br>
+  <strong>Čas:</strong> 10:00 – 16:00<br>
+  <strong>Miesto:</strong> miestnosť 202 SB<br>
+  <strong>Hlaso
   <img src="FOTKA_KANDIDATA.jpg" alt="Daniel Valko" class="profile-img" />
 
   <h2>Kto som?</h2>
@@ -81,7 +86,7 @@
     Instagram: <a href="https://instagram.com/IG_KANDIDATA" target="_blank">@IG_KANDIDATA</a>
   </p>
 
-  <h2>Odpočet do volieb</h2>
+  
   <div class="timer" id="countdown"></div>
 </section>
 
@@ -93,9 +98,10 @@
     const distance = electionDate - now;
 
     if (distance < 0) {
-      document.getElementById("countdown").innerHTML = "Voľby práve prebiehajú!";
+      document.getElementById("countdown").innerHTML = "Voľby sa skončili, ďakujem za podporu";
       clearInterval(timer);
       return;
+    }
     }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
