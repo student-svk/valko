@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Valko – Kandidát do Akademického senátu UK</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    header {
+      background-color: #97377e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #97377e;
+    }
+    .profile-img {
+      width: 250px;
+      border-radius: 12px;
+      display: block;
+      margin: 20px auto;
+    }
+    .contact a {
+      color: #97377e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .timer {
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #97377e;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Daniel Valko</h1>
+  <h3>Kandidát do Akademického senátu Univerzity Komenského</h3>
+</header>
+<section>
+  <img src="FOTKA_KANDIDATA.jpg" alt="Daniel Valko" class="profile-img" />
+
+  <h2>Kto som?</h2>
+  <p>
+    Volám sa Daniel Valko a som študentom Univerzity Komenského, ktorý sa dlhodobo zaujíma o
+    reprezentáciu študentov, transparentnosť rozhodovacích procesov a zlepšovanie študijného prostredia. 
+    Mojím cieľom je priniesť otvorenú komunikáciu medzi senátom a študentmi.
+  </p>
+
+  <h2>Moje doterajšie aktivity</h2>
+  <p>
+    Počas štúdia som sa venoval organizovaniu študentských podujatí, spolupráci na projektoch zameraných
+    na zlepšenie študijných podmienok a aktívnemu zapájaniu sa do študentských iniciatív.
+    Získal som skúsenosti s tímovou prácou, komunikáciou a riešením problémov, ktoré chcem priniesť aj do senátu.
+  </p>
+
+  <h2>Volebný program</h2>
+  <ul>
+    <li>Posilnenie transparentnosti rozhodnutí senátu.</li>
+    <li>Zjednodušenie komunikácie medzi senátom a študentmi.</li>
+    <li>Aktívna podpora študentských projektov a iniciatív.</li>
+    <li>Podpora modernizácie výučby a infraštruktúry.</li>
+  </ul>
+
+  <h2>Kontakt</h2>
+  <p class="contact">
+    Email: <a href="mailto:EMAIL_KANDIDATA">EMAIL_KANDIDATA</a><br />
+    Instagram: <a href="https://instagram.com/IG_KANDIDATA" target="_blank">@IG_KANDIDATA</a>
+  </p>
+
+  <h2>Odpočet do volieb</h2>
+  <div class="timer" id="countdown"></div>
+</section>
+
+<script>
+  const electionDate = new Date("2025-05-15T00:00:00").getTime();
+
+  const timer = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = electionDate - now;
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "Voľby práve prebiehajú!";
+      clearInterval(timer);
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+  }, 1000);
+</script>
+</body>
+</html>
