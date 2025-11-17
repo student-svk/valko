@@ -46,6 +46,19 @@
   </style>
 </head>
 <body>
+<div style="width:100%; overflow:hidden; white-space:nowrap; background:#97377e; color:white; padding:10px 0; font-size:1.1rem; font-weight:bold;">
+  <div style="display:inline-block; padding-left:100%; animation:scroll-left 18s linear infinite;">
+    KEDY? 25.11.2025 • 10:00–16:00  •  KDE? miestnosť 202 SB  •  KTO? všetci študenti PraF UK (aj externí)  •  ČO POTREBUJEM? iba svoj ISIC
+  </div>
+</div>
+
+<style>
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+</style>
+
 <header>
   <h1>Daniel Valko</h1>
   <h3>Kandidát do Akademického senátu Univerzity Komenského</h3>
@@ -54,7 +67,7 @@
   <h2>Informácie o voľbách</h2>
 
   <div style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; gap:20px; font-size:1.1rem; margin-bottom:25px; flex-wrap:wrap; background:#f3f3f3; padding:10px 15px; border-radius:8px; white-space:nowrap; overflow-x:auto;">
-    <div><strong>KEDY?</strong> 25.11.2025 • 10:00–16:00 • <span id="countdown" style="color:#97377e; font-weight:bold;"></span></div>
+    <div><strong>KEDY?</strong> 25.11.2025 • 10:00–16:00 • </div>
     <div><strong>KDE?</strong> miestnosť 202 SB</div>
     <div><strong>KTO?</strong> všetci študenti PraF UK (aj externí)</div>
     <div><strong>ČO POTREBUJEM?</strong> iba svoj ISIC</div>
@@ -117,5 +130,9 @@
       days + "d " + hours + "h " + minutes + "m " + seconds + "s";
   }, 1000);
 </script>
+<div style="text-align:center; margin:40px 0; font-size:1.8rem; font-weight:bold; color:#97377e;">
+  <span id="countdown"></span>
+</div>
+
 </body>
 </html>
