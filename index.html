@@ -6,136 +6,65 @@
   <title>Daniel Valko – Kandidát do Akademického senátu UK</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #000;
     }
+
+    /* Scrollujúci pásik hore */
+    .top-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      background: #97377e;
+      color: #fff;
+      z-index: 9999;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+    .top-banner__inner {
+      display: inline-block;
+      padding-left: 100%;
+      white-space: nowrap;
+      animation: scroll-left 20s linear infinite;
+      font-size: 1rem;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
     header {
-      background-color: #97377e;
-      color: white;
-      padding: 20px;
+      padding-top: 70px; /* odsadenie kvôli fixed pásu */
       text-align: center;
+      padding-bottom: 20px;
     }
-    section {
-      padding: 40px 20px;
+
+    h1 {
+      color: #97377e;
+      margin-bottom: 5px;
+    }
+
+    .section {
       max-width: 900px;
       margin: auto;
+      padding: 20px;
     }
-    h2 {
-      color: #97377e;
-    }
-    .profile-img {
+
+    .photo {
       width: 250px;
       border-radius: 12px;
       display: block;
       margin: 20px auto;
     }
-    .contact a {
-      color: #97377e;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .timer {
-      font-size: 1.5rem;
+
+    .footer-countdown {
       text-align: center;
+      margin: 60px 0;
+      font-size: 2rem;
       font-weight: bold;
-      margin-top: 20px;
-      color: #97377e;
-    }
-  </style>
-</head>
-<body>
-<div style="width:100%; overflow:hidden; white-space:nowrap; background:#97377e; color:white; padding:10px 0; font-size:1.1rem; font-weight:bold; position:fixed; top:0; left:0; z-index:9999;"> white-space:nowrap; background:#97377e; color:white; padding:10px 0; font-size:1.1rem; font-weight:bold; position:fixed; top:0; left:0; z-index:9999;"> white-space:nowrap; background:#97377e; color:white; padding:10px 0; font-size:1.1rem; font-weight:bold;">
-  <div style="display:inline-block; padding-left:100%; animation:scroll-left 18s linear infinite;">
-    KEDY? 25.11.2025 • 10:00–16:00  •  KDE? miestnosť 202 SB  •  KTO? všetci študenti PraF UK (aj externí)  •  ČO POTREBUJEM? <header style="margin-top:60px;"> ISIC
-  </div>
-</div>
-
-<style>
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-</style>
-
-<header style
-  <h1>Daniel Valko</h1>
-  <h3>Kandidát do Akademického senátu Univerzity Komenského</h3>
-</header>
-<section>
-  <h2>Informácie o voľbách</h2>
-
-  <div style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; gap:20px; font-size:1.1rem; margin-bottom:25px; flex-wrap:wrap; background:#f3f3f3; padding:10px 15px; border-radius:8px; white-space:nowrap; overflow-x:auto;">
-    <div><strong>KEDY?</strong> 25.11.2025 • 10:00–16:00 • </div>
-    <div><strong>KDE?</strong> miestnosť 202 SB</div>
-    <div><strong>KTO?</strong> všetci študenti PraF UK (aj externí)</div>
-    <div><strong>ČO POTREBUJEM?</strong> iba svoj ISIC</div>
-  </div>
-
-  <img src="FOTKA_KANDIDATA.jpg" alt="Daniel Valko" class="profile-img" />
-
-  <h2>Kto som?</h2>
-  <p>
-    Volám sa Daniel Valko a som študentom Univerzity Komenského, ktorý sa dlhodobo zaujíma o
-    reprezentáciu študentov, transparentnosť rozhodovacích procesov a zlepšovanie študijného prostredia. 
-    Mojím cieľom je priniesť otvorenú komunikáciu medzi senátom a študentmi.
-  </p>
-
-  <h2>Moje doterajšie aktivity</h2>
-  <p>
-    Počas štúdia som sa venoval organizovaniu študentských podujatí, spolupráci na projektoch zameraných
-    na zlepšenie študijných podmienok a aktívnemu zapájaniu sa do študentských iniciatív.
-    Získal som skúsenosti s tímovou prácou, komunikáciou a riešením problémov, ktoré chcem priniesť aj do senátu.
-  </p>
-
-  <h2>Volebný program</h2>
-  <ul>
-    <li>Posilnenie transparentnosti rozhodnutí senátu.</li>
-    <li>Zjednodušenie komunikácie medzi senátom a študentmi.</li>
-    <li>Aktívna podpora študentských projektov a iniciatív.</li>
-    <li>Podpora modernizácie výučby a infraštruktúry.</li>
-  </ul>
-
-  <h2>Kontakt</h2>
-  <p class="contact">
-    Email: <a href="mailto:EMAIL_KANDIDATA">EMAIL_KANDIDATA</a><br />
-    Instagram: <a href="https://instagram.com/IG_KANDIDATA" target="_blank">@IG_KANDIDATA</a>
-  </p>
-
-  
-  <div class="timer" id="countdown"></div>
-</section>
-
-<script>
-  const electionDate = new Date("2025-11-25T10:00:00+01:00").getTime();
-
-  const timer = setInterval(function () {
-    const now = new Date().getTime();
-    const distance = electionDate - now;
-
-    if (distance < 0) {
-      document.getElementById("countdown").innerHTML = "Voľby sa skončili, ďakujem za podporu";
-      clearInterval(timer);
-      return;
-    }
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("countdown").innerHTML =
-      days + "d " + hours + "h "  "s";
-  }<div style="text-align:center; margin:60px 0; font-size:2rem; font-weight:bold; color:#97377e;">
-  <span id="countdown"></span>
-</div>
-</body>;
-</script>
-<div style="text-align:center; margin:40px 0; font-size:1.8rem; font-weight:bold; color:#97377e;">
-  <span id="countdown"></span>
-</div>
-
-</body>
-</html>
+      color: #
