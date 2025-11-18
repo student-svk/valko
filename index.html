@@ -67,4 +67,87 @@
       margin: 60px 0;
       font-size: 2rem;
       font-weight: bold;
-      color: #
+      color: #97377e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scrollujúci banner hore -->
+  <div class="top-banner">
+    <div class="top-banner__inner" id="topBannerInner">
+      KEDY? 25.11.2025 • 10:00–16:00 • KDE? miestnosť 202 SB • KTO? všetci študenti PraF UK (aj externí) • ČO POTREBUJEM? iba svoj ISIC
+    </div>
+  </div>
+
+  <header>
+    <h1>Daniel Valko</h1>
+    <h2>Kandidát do Akademického senátu Univerzity Komenského</h2>
+  </header>
+
+  <div class="section">
+    <img src="foto.jpg" alt="Foto kandidáta" class="photo" />
+
+    <h2>Kto som</h2>
+    <p>
+      Som Daniel Valko, študent Právnickej fakulty Univerzity Komenského so záujmom o zlepšenie komunikácie medzi študentmi a vedením fakulty.
+    </p>
+
+    <h2>Čomu sa venujem / doterajšie skúsenosti</h2>
+    <p>
+      Aktívne sa venujem študentským aktivitám, organizovaniu podujatí a presadzovaniu práv a potrieb študentov. Mám skúsenosti s koordináciou projektov a komunitnou prácou.
+    </p>
+
+    <h2>Môj volebný program</h2>
+    <p>
+      - Transparentná komunikácia medzi študentmi a fakultou<br>
+      - Podpora modernizácie výučby<br>
+      - Zlepšenie podmienok pre externých študentov<br>
+      - Posilnenie študentskej samosprávy
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>Email: <a href="mailto:mail@example.com">mail@example.com</a><br>
+       Instagram: <a href="#">@instagram</a></p>
+  </div>
+
+  <!-- Odpočet dole -->
+  <div class="footer-countdown">
+    <span id="countdown"></span>
+  </div>
+
+  <script>
+    const electionStart = new Date("2025-11-25T10:00:00+01:00").getTime();
+    const electionEnd = new Date("2025-11-25T16:00:00+01:00").getTime();
+
+    function updateCountdown() {
+      const now = Date.now();
+      const el = document.getElementById('countdown');
+      if (!el) return;
+
+      if (now < electionStart) {
+        const d = electionStart - now;
+        const days = Math.floor(d / (1000*60*60*24));
+        const hours = Math.floor((d % (1000*60*60*24)) / (1000*60*60));
+        const mins = Math.floor((d % (1000*60*60)) / (1000*60));
+        const secs = Math.floor((d % (1000*60)) / 1000);
+        el.textContent = `${days}d ${hours}h ${mins}m ${secs}s — do začiatku volieb`;
+      }
+      else if (now >= electionStart && now <= electionEnd) {
+        el.textContent = "Voľby práve prebiehajú!";
+      }
+      else {
+        el.textContent = "Voľby sa skončili, ďakujem za podporu";
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    const banner = document.getElementById('topBannerInner');
+    banner.addEventListener('mouseenter', () => banner.style.animationPlayState = 'paused');
+    banner.addEventListener('mouseleave', () => banner.style.animationPlayState = 'running');
+  </script>
+
+</body>
+</html>
