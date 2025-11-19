@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Valko – Kandidát do Akademického senátu UK</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,7 +40,7 @@
     }
 
     header {
-      padding-top: 70px; /* odsadenie kvôli fixed pásu */
+      padding-top: 70px; 
       text-align: center;
       padding-bottom: 20px;
     }
@@ -48,6 +49,8 @@
       color: #97377e;
       margin-bottom: 5px;
     }
+
+    h2 { color: #97377e; }
 
     .section {
       max-width: 900px;
@@ -60,6 +63,18 @@
       border-radius: 12px;
       display: block;
       margin: 20px auto;
+    }
+
+    .feature {
+      border-left: 4px solid #97377e;
+      background: #f7f7f7;
+      padding: 12px;
+      margin: 16px 0;
+    }
+    .feature-title {
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #97377e;
     }
 
     .footer-countdown {
@@ -76,7 +91,7 @@
   <!-- Scrollujúci banner hore -->
   <div class="top-banner">
     <div class="top-banner__inner" id="topBannerInner">
-      KEDY? 25.11.2025 • 10:00 – 16:00 • KDE? miestnosť 202 SB • KTO? všetci študenti PraF UK (aj externí) • ČO POTREBUJEM? iba svoj ISIC
+      KEDY? 25.11.2025 • 10:00–16:00 • KDE? miestnosť 202 SB • KTO? všetci študenti PraF UK (aj externí) • ČO POTREBUJEM? iba svoj ISIC
     </div>
   </div>
 
@@ -86,32 +101,76 @@
   </header>
 
   <div class="section">
+    
     <img src="foto.jpg" alt="Foto kandidáta" class="photo" />
 
+    <!-- KTO SOM -->
     <h2>Kto som</h2>
-    <p>
-      Som Daniel Valko, študent Právnickej fakulty Univerzity Komenského so záujmom o zlepšenie komunikácie medzi študentmi a vedením fakulty.
+    <p>Študent práva v 2. ročníku Mgr. stupňa štúdia.</p>
+    <p>Delegát Študentskej rady vysokých škôl za Právnickú fakultu UK od 12/2024.</p>
+    <p>Spoluorganizátor Debatného klubu Univerzity Komenského —
+      <a href="https://www.instagram.com/debaty_uk/" target="_blank">@debaty_uk</a>
     </p>
 
-    <h2>Čomu sa venujem / doterajšie skúsenosti</h2>
+    <!-- ČO JE ZA MNOU -->
+    <h2>Čo je za mnou</h2>
     <p>
-      Aktívne sa venujem študentským aktivitám, organizovaniu podujatí a presadzovaniu práv a potrieb študentov. Mám skúsenosti s koordináciou projektov a komunitnou prácou.
+      Petičná iniciatíva – na základe 2754 podpisov vznikla hromadná pripomienka k novému zákonu o vysokých školách,
+      ktorý nadobudne účinnosť 1. septembra 2026.
+      Pozri: <a href="https://www.peticie.com/judr" target="_blank">https://www.peticie.com/judr</a>
     </p>
 
-    <h2>Môj volebný program</h2>
     <p>
-      - Transparentná komunikácia medzi študentmi a fakultou<br>
-      - Podpora modernizácie výučby<br>
-      - Zlepšenie podmienok pre externých študentov<br>
-      - Posilnenie študentskej samosprávy
+      Priznávanie absolventom druhého stupňa študijného odboru právo rovno titul JUDr., doktor práv sa úspešne pretavilo do § 61 ods. 1.
+      Zákonné znenie:
     </p>
 
+    <pre>
+„Vysoká škola môže určiť, že uznáva obhájenú diplomovú prácu alebo obhájenú dizertačnú prácu ako rigoróznu prácu
+a úspešne vykonanú dizertačnú skúšku ako rigoróznu skúšku;
+podrobnosti ustanoví vnútorný́ predpis vysokej školy.“
+    </pre>
+
+    <p>
+      Podmienky uznávania si vyžadujú spresnenie vo vnútornom predpise univerzity.
+    </p>
+
+    <!-- ČO PRINÁŠAM -->
+    <h2>Čo prinášam</h2>
+
+    <div class="feature">
+      <div class="feature-title">01 — Uznávanie diplomovej alebo dizertačnej práce ako rigoróznej</div>
+      <p>
+        Aby sa naplnil cieľ sledovaný v hromadnej pripomienke, po čom volal nemalý počet študentov práva.
+        Lepšia poznateľnosť absolventov práva na trhu práce krátko po magisterských štátniciach.
+      </p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-title">02 — Študentská kuchyňa</div>
+      <p>
+        Študenti sa dopytujú po kuchynskom vybavení. 
+        Pokiaľ by sa našli zdroje financovania a pripravil sa projekt,
+        dá sa tento priestor zriadiť v novozakúpenej budove na Vajanského nábreží 10.
+      </p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-title">03 — Prihlasovanie na rozvrh</div>
+      <p>
+        AIS2 je v pôsobnosti univerzity, no fakulta môže riešiť fázovanie rozvrhu,
+        aby sa študenti nemuseli deliť do viacerých skupín pri registrácii.
+      </p>
+    </div>
+
+    <!-- Kontakt -->
     <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:mail@example.com">mail@example.com</a><br>
-       Instagram: <a href="#">@instagram</a></p>
+    <p>Email: <a href="mailto:mail@example.com">mail@example.com</a></p>
+    <p>Instagram: <a href="#">@instagram</a></p>
+
   </div>
 
-  <!-- Odpočet dole -->
+  <!-- ODPOČET -->
   <div class="footer-countdown">
     <span id="countdown"></span>
   </div>
