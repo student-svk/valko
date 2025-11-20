@@ -112,36 +112,50 @@
       color: #97377e;
     }
 
-    .lang-switch {
+   .lang-switch {
   position: fixed;
   top: 8px;
   right: 12px;
   z-index: 10000;
   font-size: 1rem;
   font-weight: bold;
+  display: flex;
+  gap: 6px;
 }
 
 .lang-switch a {
-  color: #ffffff;
   text-decoration: none;
   padding: 4px 8px;
   border-radius: 6px;
-  background: #97377e;
-  margin-left: 5px;
+  transition: 0.2s ease-in-out;
 }
 
-.lang-switch a:hover {
+/* Aktívny jazyk */
+.lang-active {
+  background: #97377e;
+  color: white;
+}
+
+/* Neaktívny jazyk */
+.lang-inactive {
+  background: #d9a9cb;
+  color: white;
+}
+
+.lang-inactive:hover {
   opacity: 0.8;
 }
+
 
   </style>
 </head>
 <body>
 
 <div class="lang-switch">
-  <a href="index.html">SVK</a>
-  <a href="en.html">ENG</a>
+  <a href="index.html" class="lang-active">SVK</a>
+  <a href="en.html" class="lang-inactive">ENG</a>
 </div>
+
 
   
   <!-- Scrollujúci banner hore -->
