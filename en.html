@@ -47,8 +47,41 @@
       100% { transform: translateX(-100%); }
     }
 
+    /* Language switcher */
+    .lang-switch {
+      position: fixed;
+      top: 45px;
+      right: 15px;
+      z-index: 10000;
+      font-size: 1rem;
+      font-weight: bold;
+      background: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: 2px solid #97377e;
+      display: flex;
+      gap: 6px;
+    }
+
+    .lang-switch a {
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: 0.2s ease-in-out;
+      color: #97377e;
+    }
+
+    .lang-active {
+      background: #97377e;
+      color: white;
+    }
+
+    .lang-inactive:hover {
+      opacity: 0.8;
+    }
+
     header {
-      padding-top: 70px;
+      padding-top: 90px;
       text-align: center;
       padding-bottom: 5px;
     }
@@ -66,13 +99,6 @@
       padding: 10px 20px;
     }
 
-    .photo {
-      width: 250px;
-      border-radius: 12px;
-      display: block;
-      margin: 0px auto 20px auto;
-    }
-
     .motto {
       text-align: center;
       font-size: 1.4rem;
@@ -81,6 +107,13 @@
       margin-top: 10px;
       margin-bottom: 10px;
       font-style: italic;
+    }
+
+    .photo {
+      width: 250px;
+      border-radius: 12px;
+      display: block;
+      margin: 5px auto 20px auto;
     }
 
     .feature {
@@ -112,50 +145,15 @@
       color: #97377e;
     }
 
-.lang-switch {
-  position: fixed;
-  top: 8px;
-  right: 12px;
-  z-index: 10000;
-  font-size: 1rem;
-  font-weight: bold;
-  display: flex;
-  gap: 6px;
-}
-
-.lang-switch a {
-  text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 6px;
-  transition: 0.2s ease-in-out;
-}
-
-/* Aktívny jazyk */
-.lang-active {
-  background: #97377e;
-  color: white;
-}
-
-/* Neaktívny jazyk */
-.lang-inactive {
-  background: #d9a9cb;
-  color: white;
-}
-
-.lang-inactive:hover {
-  opacity: 0.8;
-}
-    
   </style>
 </head>
 <body>
 
+  <!-- Language Switcher -->
   <div class="lang-switch">
-  <a href="index.html" class="lang-inactive">SVK</a>
-  <a href="en.html" class="lang-active">ENG</a>
-</div>
-
-
+    <a href="index.html" class="lang-inactive">SVK</a>
+    <a href="en.html" class="lang-active">ENG</a>
+  </div>
 
   <!-- Scrolling banner -->
   <div class="top-banner">
@@ -202,8 +200,8 @@
     </p>
 
     <p>
-      The recognition of a Master’s thesis or dissertation as equivalent to a rigorous thesis  
-      has successfully been incorporated into §61(1) of Act No. 300/2025 Coll..  
+      The recognition of a Master’s thesis or dissertation as a rigorous thesis  
+      has successfully been incorporated into § 61(1) of Act No. 300/2025 Coll.  
       Legal wording:
     </p>
 
@@ -224,7 +222,7 @@
     <div class="feature">
       <div class="feature-title">01 — Recognition of Master’s or Doctoral Thesis as a Rigorous Thesis</div>
       <p>
-        I am a co-initiator of the mass comment supported by nearly 3,000 students and legal professionals,  
+        I am a co-initiator of a mass comment supported by nearly 3,000 students and legal professionals,  
         aimed at recognizing Master’s and Doctoral theses as rigorous theses.  
         Although our proposal made it into the law (effective from 1 Sept 2026),  
         it must still be implemented at the university and faculty level — something I have extensive experience with.  
@@ -295,10 +293,6 @@
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
-
-    const banner = document.getElementById('topBannerInner');
-    banner.addEventListener('mouseenter', () => banner.style.animationPlayState = 'paused');
-    banner.addEventListener('mouseleave', () => banner.style.animationPlayState = 'running');
   </script>
 
 </body>
