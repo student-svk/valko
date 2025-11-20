@@ -15,33 +15,33 @@
     }
 
     .motto {
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #97377e;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-style: italic;
-}
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #97377e;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
 
-.footer-thanks {
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #97377e;
-  margin-bottom: 40px;
-}
+    .footer-thanks {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #97377e;
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
 
-    
     .legal {
-  font-style: italic;
-  background: #f0f0f0;
-  padding: 10px;
-  border-left: 4px solid #97377e;
-  white-space: normal; /* allows text wrapping */
-}
+      font-style: italic;
+      background: #f0f0f0;
+      padding: 10px;
+      border-left: 4px solid #97377e;
+      white-space: normal;
+    }
 
-    /* Scrollujúci pásik hore */
+    /* Scroll banner */
     .top-banner {
       position: fixed;
       top: 0;
@@ -66,8 +66,42 @@
       100% { transform: translateX(-100%); }
     }
 
+    /* Language switch */
+    .lang-switch {
+      position: fixed;
+      top: 45px;
+      right: 12px;
+      z-index: 10000;
+      font-size: 1rem;
+      font-weight: bold;
+      display: flex;
+      gap: 6px;
+      background: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: 2px solid #97377e;
+    }
+
+    .lang-switch a {
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: 0.2s;
+      color: #97377e;
+      font-weight: bold;
+    }
+
+    .lang-active {
+      background: #97377e;
+      color: white !important;
+    }
+
+    .lang-inactive:hover {
+      opacity: 0.7;
+    }
+
     header {
-      padding-top: 70px; 
+      padding-top: 90px;
       text-align: center;
       padding-bottom: 5px;
     }
@@ -76,8 +110,9 @@
       color: #97377e;
       margin-bottom: 5px;
     }
-
-    h2 { color: #97377e; }
+    h2 {
+      color: #97377e;
+    }
 
     .section {
       max-width: 900px;
@@ -89,7 +124,7 @@
       width: 250px;
       border-radius: 12px;
       display: block;
-      margin: 0px auto 20px auto;
+      margin: 5px auto 20px auto;
     }
 
     .feature {
@@ -98,6 +133,7 @@
       padding: 12px;
       margin: 16px 0;
     }
+
     .feature-title {
       font-weight: bold;
       margin-bottom: 6px;
@@ -106,187 +142,147 @@
 
     .footer-countdown {
       text-align: center;
-      margin: 60px 0;
+      margin: 10px 0 60px 0;
       font-size: 2rem;
       font-weight: bold;
       color: #97377e;
     }
-
-   .lang-switch {
-  position: fixed;
-  top: 8px;
-  right: 12px;
-  z-index: 10000;
-  font-size: 1rem;
-  font-weight: bold;
-  display: flex;
-  gap: 6px;
-}
-
-.lang-switch a {
-  text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 6px;
-  transition: 0.2s ease-in-out;
-}
-
-/* Aktívny jazyk */
-.lang-active {
-  background: #97377e;
-  color: white;
-}
-
-/* Neaktívny jazyk */
-.lang-inactive {
-  background: #d9a9cb;
-  color: white;
-}
-
-.lang-inactive:hover {
-  opacity: 0.8;
-}
-
-
   </style>
 </head>
 <body>
 
+<!-- Language Switch -->
 <div class="lang-switch">
   <a href="index.html" class="lang-active">SVK</a>
   <a href="en.html" class="lang-inactive">ENG</a>
 </div>
 
-
-  
-  <!-- Scrollujúci banner hore -->
-  <div class="top-banner">
-    <div class="top-banner__inner" id="topBannerInner">
-      KEDY? 25.11.2025 • 10:00–16:00 • KDE? miestnosť 202 SB • KTO? všetci študenti PraF UK (aj externí) • ČO POTREBUJEM? iba svoj ISIC
-    </div>
+<!-- Scroll banner -->
+<div class="top-banner">
+  <div class="top-banner__inner" id="topBannerInner">
+    KEDY? 25.11.2025 • 10:00–16:00 • KDE? miestnosť 202 SB • KTO? všetci študenti PraF UK (aj externí) • ČO POTREBUJEM? iba svoj ISIC
   </div>
-
-  <header>
-    <h1>Daniel Valko</h1>
-    <h2>Kandidát do Akademického senátu Univerzity Komenského</h2>
-  </header>
-
-  <div class="section">
-    <div class="motto">"Výsledky za mnou, budúcnosť pred nami!"</div>
-    
-    <img src="foto.jpg" alt="Foto kandidáta" class="photo" />
-
-    <!-- KTO SOM -->
-    <h2>Kto som</h2>
-    <p>Študent práva v 2. ročníku Mgr. stupňa štúdia.</p>
-    <p>Delegát Študentskej rady vysokých škôl za Právnickú fakultu UK od 12/2024.</p>
-    <p>Spoluorganizátor Debatného klubu Univerzity Komenského —
-      <a href="https://www.instagram.com/debaty_uk/" target="_blank">@debaty_uk</a>
-    <p>Predovšetkým však apolitický a nestranný kandidát (nie som členom žiadnej politickej strany, ani jej mládežníckej organizácie), ktorý si zakladá na transparentnosti v komunikácii so študentmi.</p>
-    </p>
-
-    <!-- ČO JE ZA MNOU -->
-    <h2>Čo je za mnou</h2>
-    <p>
-      Petičná iniciatíva – na základe 2754 podpisov vznikla hromadná pripomienka k novému zákonu o vysokých školách,
-      ktorý nadobudne účinnosť 1. septembra 2026.
-      Pozri: <a href="https://www.peticie.com/judr" target="_blank">Petícia</a>
-    </p>
-
-    <p>
-      Vyrokovanie 13 namiesto 14 týždňového letného semestra a pravidelne poskytujeme aktuality z diania v Študentskej rade vysokých škôl.
-    </p>
-
-    <p>
-      Priznávanie absolventom druhého stupňa študijného odboru právo rovno titul JUDr., doktor práv sa úspešne pretavilo do § 61 ods. 1.
-      Zákonné znenie: § 61 ods. 1 zákona č. 300/2025 Z. z.
-    </p>
-
-    <p class="legal">
-  „Vysoká škola môže určiť, že uznáva obhájenú diplomovú prácu alebo obhájenú dizertačnú prácu ako rigoróznu prácu
-  a úspešne vykonanú dizertačnú skúšku ako rigoróznu skúšku; podrobnosti ustanoví vnútorný predpis vysokej školy.“
-</p>
-
-
-    <p>
-      Podmienky uznávania si vyžadujú spresnenie vo vnútornom predpise univerzity.
-    </p>
-
-    <!-- ČO PRINÁŠAM -->
-    <h2>Čo prinášam</h2>
-
-    <div class="feature">
-      <div class="feature-title">01 — Uznávanie diplomovej alebo dizertačnej práce ako rigoróznej</div>
-      <p>
-        Som spoluiniciátorom hromadnej pripomienky, v ktorej nás podporilo skoro 3000 študentov a ľudí z praxe, ktorej cieľom je uznávanie diplomovej a dizertačnej práce za rigoróznu.
-        Aj napriek tomu, že sa naša pripomienka pretavila až do platného právneho predpisu (účinného od 1.9.2026), bude stále potrebné ju implementovať aj do univerzitných a fakultných predpisov, s čím mám bohaté skúsenosti.
-        Napríklad: <a href="https://srvs.eu/wp-content/uploads/2025/10/Rokovaci_poriadok_uprava_okt_2025.pdf" target="_blank">Rokovací poriadok ŠRVŠ, ktorého som autorom.</a>
-      </p>
-    </div>
-
-    <div class="feature">
-      <div class="feature-title">02 — Študentská kuchynka</div>
-      <p>
-        Radi by ste si nosili jedlo z domu, ktoré by ste si len ohriali a ušetrili tým na stravovaní?
-        Vo fakultných priestoroch chýba kuchynské vybavenie, ktoré je dnes štandardom nejednej vysokej školy, či zamestnávateľa. 
-        Rád by som presadil zabezpečenie základného kuchynského vybavenia a adekvátneho priestoru.
-      </p>
-    </div>
-
-    <div class="feature">
-      <div class="feature-title">03 — Prihlasovanie na rozvrh</div>
-      <p>
-        Večný problém prihlasovania sa na rozvrh je, že nám to pravdepodobne zase padne....
-        AIS2 je v pôsobnosti univerzity, preto by som ako senátor v univerzitnom senáte apeloval na zlepšenie tohto zastaralého systému.
-      </p>
-    </div>
-
-    <!-- Kontakt -->
-    <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:valko44@uniba.sk">valko44@uniba.sk</a></p>
-
-  </div>
-
-  <div class="footer-thanks">
-  Ďakujem za podporu !
 </div>
 
-  <!-- ODPOČET -->
-  <div class="footer-countdown">
-    <span id="countdown"></span>
+<header>
+  <h1>Daniel Valko</h1>
+  <h2>Kandidát do Akademického senátu Univerzity Komenského</h2>
+</header>
+
+<div class="section">
+
+  <div class="motto">"Výsledky za mnou, budúcnosť pred nami!"</div>
+
+  <img src="foto.jpg" alt="Foto kandidáta" class="photo" />
+
+  <!-- Kto som -->
+  <h2>Kto som</h2>
+  <p>Študent práva v 2. ročníku Mgr. stupňa štúdia.</p>
+  <p>Delegát Študentskej rady vysokých škôl za Právnickú fakultu UK od 12/2024.</p>
+  <p>Spoluorganizátor Debatného klubu Univerzity Komenského —
+    <a href="https://www.instagram.com/debaty_uk/" target="_blank">@debaty_uk</a>
+  </p>
+  <p>Predovšetkým však apolitický a nestranný kandidát, ktorý si zakladá na transparentnosti v komunikácii so študentmi.</p>
+
+  <!-- Čo je za mnou -->
+  <h2>Čo je za mnou</h2>
+  <p>
+    Petičná iniciatíva – na základe 2754 podpisov vznikla hromadná pripomienka k novému zákonu o vysokých školách,
+    ktorý nadobudne účinnosť 1. septembra 2026.
+    Pozri: <a href="https://www.peticie.com/judr" target="_blank">Petícia</a>
+  </p>
+
+  <p>
+    Vyrokovanie 13 namiesto 14 týždňového letného semestra a pravidelné poskytovanie aktualít zo ŠRVŠ.
+  </p>
+
+  <p>
+    Priznávanie absolventom práva titul JUDr. sa úspešne pretavilo do právnej úpravy.
+    Zákonné znenie: § 61 ods. 1 zákona č. 300/2025 Z. z.
+  </p>
+
+  <p class="legal">
+    „Vysoká škola môže určiť, že uznáva obhájenú diplomovú prácu alebo obhájenú dizertačnú prácu ako rigoróznu prácu
+    a úspešne vykonanú dizertačnú skúšku ako rigoróznu skúšku; podrobnosti ustanoví vnútorný predpis vysokej školy.“
+  </p>
+
+  <p>
+    Podmienky uznávania si vyžadujú spresnenie vo vnútornom predpise univerzity.
+  </p>
+
+  <!-- Čo prinášam -->
+  <h2>Čo prinášam</h2>
+
+  <div class="feature">
+    <div class="feature-title">01 — Uznávanie diplomovej alebo dizertačnej práce ako rigoróznej</div>
+    <p>
+      Som spoluiniciátorom hromadnej pripomienky podporenej takmer 3000 študentmi a právnikmi z praxe.
+      Aj keď sa zmena dostala do zákona (účinného od 1.9.2026), bude ju potrebné implementovať aj do interných predpisov.
+      Napríklad som autorom:
+      <a href="https://srvs.eu/wp-content/uploads/2025/10/Rokovaci_poriadok_uprava_okt_2025.pdf" target="_blank">Rokovacieho poriadku ŠRVŠ</a>.
+    </p>
   </div>
 
-  <script>
-    const electionStart = new Date("2025-11-25T10:00:00+01:00").getTime();
-    const electionEnd = new Date("2025-11-25T16:00:00+01:00").getTime();
+  <div class="feature">
+    <div class="feature-title">02 — Študentská kuchynka</div>
+    <p>
+      Chceli by ste si priniesť jedlo z domu a len si ho ohriať?
+      Na fakulte chýba kuchynské vybavenie, ktoré je štandardom na mnohých vysokých školách.
+      Usilujem sa o jeho doplnenie.
+    </p>
+  </div>
 
-    function updateCountdown() {
-      const now = Date.now();
-      const el = document.getElementById('countdown');
-      if (!el) return;
+  <div class="feature">
+    <div class="feature-title">03 — Prihlasovanie na rozvrh</div>
+    <p>
+      Problém so spomaleným AIS-om sa opakuje každý semester.
+      Ako senátor v akademickom senáte UK budem tlačiť na univerzitu, aby modernizovala tento zastaraný systém.
+    </p>
+  </div>
 
-      if (now < electionStart) {
-        const d = electionStart - now;
-        const days = Math.floor(d / (1000*60*60*24));
-        const hours = Math.floor((d % (1000*60*60*24)) / (1000*60*60));
-        const mins = Math.floor((d % (1000*60*60)) / (1000*60));
-        const secs = Math.floor((d % (1000*60)) / 1000);
-        el.textContent = `${days}d ${hours}h ${mins}m ${secs}s — do začiatku volieb`;
-      }
-      else if (now >= electionStart && now <= electionEnd) {
-        el.textContent = "Voľby práve prebiehajú!";
-      }
-      else {
-        el.textContent = "Voľby sa skončili, ďakujem za podporu";
-      }
+  <!-- Kontakt -->
+  <h2>Kontakt</h2>
+  <p>Email: <a href="mailto:valko44@uniba.sk">valko44@uniba.sk</a></p>
+
+</div>
+
+<div class="footer-thanks">
+  Ďakujem za podporu!
+</div>
+
+<!-- Odpočet -->
+<div class="footer-countdown">
+  <span id="countdown"></span>
+</div>
+
+<script>
+  const electionStart = new Date("2025-11-25T10:00:00+01:00").getTime();
+  const electionEnd = new Date("2025-11-25T16:00:00+01:00").getTime();
+
+  function updateCountdown() {
+    const now = Date.now();
+    const el = document.getElementById('countdown');
+    if (!el) return;
+
+    if (now < electionStart) {
+      const d = electionStart - now;
+      const days = Math.floor(d / (1000*60*60*24));
+      const hours = Math.floor((d % (1000*60*60*24)) / (1000*60*60));
+      const mins = Math.floor((d % (1000*60*60)) / (1000*60));
+      const secs = Math.floor((d % (1000*60)) / 1000);
+      el.textContent = `${days}d ${hours}h ${mins}m ${secs}s — do začiatku volieb`;
     }
+    else if (now >= electionStart && now <= electionEnd) {
+      el.textContent = "Voľby práve prebiehajú!";
+    }
+    else {
+      el.textContent = "Voľby sa skončili, ďakujem za podporu";
+    }
+  }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    const banner = document.getElementById('topBannerInner');
-    banner.addEventListener('mouseenter', () => banner.style.animationPlayState = 'paused');
-    banner.addEventListener('mouseleave', () => banner.style.animationPlayState = 'running');
-  </script>
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
