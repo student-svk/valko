@@ -157,12 +157,6 @@
   <a href="en.html" class="lang-inactive">ENG</a>
 </div>
 
-<!-- Scroll banner -->
-<div class="top-banner">
-  <div class="top-banner__inner" id="topBannerInner">
-    25.11.2025 • 10:00–16:30 • miestnosť 202 SB • všetci študenti PraF UK (aj externí) • prines si svoj ISIC !
-  </div>
-</div>
 
 <header>
   <h1>Daniel Valko</h1>
@@ -246,43 +240,6 @@
 
 </div>
 
-<div class="footer-thanks">
-  Ďakujem za podporu!
-</div>
-
-<!-- Odpočet -->
-<div class="footer-countdown">
-  <span id="countdown"></span>
-</div>
-
-<script>
-  const electionStart = new Date("2025-11-25T10:00:00+01:00").getTime();
-  const electionEnd = new Date("2025-11-25T16:00:00+01:00").getTime();
-
-  function updateCountdown() {
-    const now = Date.now();
-    const el = document.getElementById('countdown');
-    if (!el) return;
-
-    if (now < electionStart) {
-      const d = electionStart - now;
-      const days = Math.floor(d / (1000*60*60*24));
-      const hours = Math.floor((d % (1000*60*60*24)) / (1000*60*60));
-      const mins = Math.floor((d % (1000*60*60)) / (1000*60));
-      const secs = Math.floor((d % (1000*60)) / 1000);
-      el.textContent = `${days}d ${hours}h ${mins}m ${secs}s — do začiatku volieb`;
-    }
-    else if (now >= electionStart && now <= electionEnd) {
-      el.textContent = "Voľby práve prebiehajú!";
-    }
-    else {
-      el.textContent = "Voľby sa skončili, ďakujem za podporu";
-    }
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
 
 </body>
 </html>
