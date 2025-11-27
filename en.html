@@ -159,12 +159,6 @@
     <a href="en.html" class="lang-active">ENG</a>
   </div>
 
-  <!-- Scrolling banner -->
-  <div class="top-banner">
-    <div class="top-banner__inner" id="topBannerInner">
-      25 Nov 2025 • 10:00–16:30 • Room 202 SB • All law students • Student ID required
-    </div>
-  </div>
 
   <header>
     <h1>Daniel Valko</h1>
@@ -259,44 +253,6 @@
     <p>Email: <a href="mailto:valko44@uniba.sk">valko44@uniba.sk</a></p>
   </div>
 
-  <!-- THANK YOU -->
-  <div class="footer-thanks">
-    Thank you for your support!
-  </div>
-
-  <!-- COUNTDOWN -->
-  <div class="footer-countdown">
-    <span id="countdown"></span>
-  </div>
-
-  <script>
-    const electionStart = new Date("2025-11-25T10:00:00+01:00").getTime();
-    const electionEnd = new Date("2025-11-25T16:00:00+01:00").getTime();
-
-    function updateCountdown() {
-      const now = Date.now();
-      const el = document.getElementById('countdown');
-      if (!el) return;
-
-      if (now < electionStart) {
-        const d = electionStart - now;
-        const days = Math.floor(d / (1000*60*60*24));
-        const hours = Math.floor((d % (1000*60*60*24)) / (1000*60*60));
-        const mins = Math.floor((d % (1000*60*60)) / (1000*60));
-        const secs = Math.floor((d % (1000*60)) / 1000);
-        el.textContent = `${days}d ${hours}h ${mins}m ${secs}s — until the election begins`;
-      }
-      else if (now >= electionStart && now <= electionEnd) {
-        el.textContent = "The election is currently taking place!";
-      }
-      else {
-        el.textContent = "The election has ended — thank you for your support.";
-      }
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
 
 </body>
 </html>
